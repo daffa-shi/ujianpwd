@@ -2,13 +2,20 @@
   <div>
     <div class="ujian">
       <h2>Ujian</h2>
-      <div v-for="(tests_idx, tests_val) in test" :key="tests_idx">
+      <div v-for="(tests_val, tests_idx) in test" :key="tests_idx">
         <h3>{{tests_idx+1}}. {{tests_val.question}}</h3>
-        <div v-for="(answers_idx, answers_val) in answer" :key="answers_idx">
+        <div v-for="(answers_val, answers_idx) in tests_val.answer" :key="answers_idx">
           <input type="radio" :name="tests_idx" :value="answers_val[0]">
-          <h3 v-text="answers_val[0]"></h3>
+          <h5 v-text="answers_val[0]"></h5>
         </div>
       </div>
+      <!-- <div v-for="(soal, indexsoal) in test" v-bind:key="indexsoal">
+        <h2>No {{indexsoal+1}}. {{soal.deskripsi}} </h2>
+        <div v-for="(pilihans, indexpiilhan) in soal.pilihan" v-bind:key="indexpiilhan">
+          <input type="radio" :value="pilihans[0]" :name="indexsoal">
+          <span v-text="pilihans[0]"></span>
+        </div>
+      </div> -->
       <button type="button" name="button">Submit</button>
     </div>
   </div>
