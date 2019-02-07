@@ -9,13 +9,6 @@
           <h5 v-text="answers_val[0]"></h5>
         </div>
       </div>
-      <!-- <div v-for="(soal, indexsoal) in test" v-bind:key="indexsoal">
-        <h2>No {{indexsoal+1}}. {{soal.deskripsi}} </h2>
-        <div v-for="(pilihans, indexpiilhan) in soal.pilihan" v-bind:key="indexpiilhan">
-          <input type="radio" :value="pilihans[0]" :name="indexsoal">
-          <span v-text="pilihans[0]"></span>
-        </div>
-      </div> -->
       <button type="button" name="button">Submit</button>
     </div>
   </div>
